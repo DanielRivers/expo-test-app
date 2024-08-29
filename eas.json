@@ -1,0 +1,32 @@
+{
+  "cli": {
+    "version": ">= 7.6.2"
+  },
+  "build": {
+    "production": {
+        "android": {
+          "buildType": "apk"
+        },
+        "env": {
+          "EXPO_PUBLIC_KINDE_DOMAIN": "https://danielkinde.kinde.com",
+          "EXPO_PUBLIC_KINDE_CLIENT_ID": "63d303eb63e849048a464192aa8314fe",
+          "EXPO_PUBLIC_KINDE_REDIRECT_URL": "com.danielkinde.testexpo://kinde_callback"
+        }
+      },
+      "test": {
+        "env": {
+          "EXPO_PUBLIC_API_URL": "https://api.test.com"
+        }
+      },
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

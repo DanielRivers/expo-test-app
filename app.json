@@ -1,36 +1,46 @@
 {
   "expo": {
-    "name": "my-app",
-    "slug": "my-app",
+    "name": "StickerSmash",
+    "slug": "sticker-smash-test-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
+    "scheme": "com.danielkinde.testexpo",
+    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.danielkinde.testexpo"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.danielkinde.testexpo"
     },
     "web": {
-      "bundler": "metro",
-      "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
+    "extra": {
+      "eas": {
+        "projectId": "f65cdcc6-3e4d-41bc-9fc5-0520774d63fc"
+      }
+    },
+    "owner": "kinde",
     "plugins": [
-      "expo-router"
-    ],
-    "experiments": {
-      "typedRoutes": true
-    }
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "react-native",
+          "organization": "kinde"
+        }
+      ]
+    ]
   }
 }
